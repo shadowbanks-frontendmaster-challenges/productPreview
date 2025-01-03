@@ -36,6 +36,7 @@ main {
 main picture img {
   width: 100%;
   object-fit: fill;
+  height: 65vw;
   display: block;
   border-radius: 1rem 1rem 0 0;
 }
