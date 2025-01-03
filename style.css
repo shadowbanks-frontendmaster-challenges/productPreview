@@ -1,17 +1,103 @@
-/* Error: Expected expression.
- *    ,
- * 34 |     padding: 
- *    |              ^
- *    '
- *   assests\sass\pages\main.scss 34:14  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 34 \2502      padding: \d\a    \2502               ^\a    \2575 \a   assests\\sass\\pages\\main.scss 34:14  root stylesheet";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 90vw;
+  height: 100%;
+}
+main picture img {
+  width: 100%;
+  object-fit: fill;
+  display: block;
+  border-radius: 1rem 1rem 0 0;
+}
+main .container {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.5rem;
+  border-radius: 0 0 1rem 1rem;
+  width: 100%;
+}
+main .container .category {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: 0.8rem;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+main .container .product-name {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.1;
+  margin: 1rem 0;
+  color: hsl(212, 21%, 14%);
+}
+main .container .product-desc {
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+main .container .price {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+main .container .price .current-price {
+  font-weight: 700;
+  font-size: 2.3rem;
+  font-family: "Fraunces", sans-serif;
+  color: hsl(158, 36%, 37%);
+}
+main .container .price .original-price {
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+}
+main .container .addToCart {
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+main .container .addToCart img {
+  width: 1rem;
+  height: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
