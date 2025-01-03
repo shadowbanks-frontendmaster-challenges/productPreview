@@ -1,0 +1,36 @@
+@use "../base/reset";
+
+$Dark-cyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+$V-dark-blue: hsl(212, 21%, 14%);
+$Dark-grayish-blue: hsl(228, 12%, 48%);
+$White: hsl(0, 0%, 100%);
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: $Cream;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem;
+
+  picture {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 35vh;
+      object-fit: fill;
+      border-radius: .5rem .5rem 0 0;
+    }
+  }
+
+  .container {
+    background-color: $White;
+    padding: 1rem;
+  }
+}
