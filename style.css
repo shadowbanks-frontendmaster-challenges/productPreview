@@ -144,4 +144,11 @@ main .container .price .original-price {
   height: 1rem;
 }
 
+@media (min-width: 38rem) {
+  .addToCart:hover {
+    cursor: pointer;
+    background-color: hsl(158, 36%, 25%);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
