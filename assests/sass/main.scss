@@ -1,4 +1,5 @@
-@use "../base/reset";
+@use "./base/reset";
+@use "./mixin/mediaqueries" as mq;
 
 $primary-font: "Montserrat", sans-serif;
 $weight-1: 500;
@@ -25,17 +26,38 @@ body {
 }
 
 main {
-  //   margin: 1rem 0;
-  max-width: 90vw;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+
+  @include mq.respond_to(desktop) {
+    flex-direction: row;
+    height: 35rem;
+    width: 45rem;
+  }
 
   picture {
+    height: 40%;
+
+    @include mq.respond_to(desktop) {
+      height: 100%;
+      width: 50%;
+    }
+
     img {
       width: 100%;
+      height: 100%;
       object-fit: fill;
-      height: 65vw;
       display: block;
       border-radius: 1rem 1rem 0 0;
+
+      @include mq.respond_to(desktop) {
+        height: 100%;
+        border-radius: 1rem 0 0 1rem;
+      }
     }
   }
 
@@ -45,6 +67,15 @@ main {
     border-radius: 0 0 1rem 1rem;
     width: 100%;
 
+    @include mq.respond_to(desktop) {
+      height: 100%;
+      width: 50%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 0 1rem 1rem 0;
+    }
     .category {
       text-transform: uppercase;
       letter-spacing: 0.4rem;
@@ -56,12 +87,15 @@ main {
     .product-name {
       font-family: $title-font;
       font-weight: $weight-2;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       line-height: 1.1;
       margin: 1rem 0;
       color: $V-dark-blue;
-    }
 
+      @include mq.respond_to(desktop) {
+        padding-left: 0.2rem;
+      }
+    }
     .product-desc {
       color: $Dark-grayish-blue;
       font-weight: $weight-1;
@@ -71,7 +105,7 @@ main {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 1.2rem;
       margin: 1rem 0;
       .current-price {
         font-weight: $weight-2;
@@ -86,23 +120,23 @@ main {
         color: $Dark-grayish-blue;
       }
     }
+  }
+}
 
-    .addToCart {
-      width: 100%;
-      background-color: $Dark-cyan;
-      color: $White;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      font-weight: $weight-1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
+.addToCart {
+  width: 100%;
+  background-color: $Dark-cyan;
+  color: $White;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: $weight-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 
-      img {
-        width: 1rem;
-        height: 1rem;
-      }
-    }
+  img {
+    width: 1rem;
+    height: 1rem;
   }
 }
